@@ -50,13 +50,13 @@ def radix2la16(L):
     p = 0
     ok = 1
     while ok:
-        buc = [[] for _ in range(16)]
+        buc = [[] for _ in range(2**16)]
         ok = 0
         for elem in L:
             aux = elem >> p
             if aux > 2**16-1:
                 ok = 1
-            aux %= 16
+            aux %= 2**16
             buc[aux].append(elem)
         cnt = 0
         for i in range(len(buc)):
@@ -114,9 +114,6 @@ def shell_sort(nesortat, lenght):
 
 
 def count_sort(nesortat, maxim):
-    if maxim > 1000000000:
-        print("Maximul este prea mare.")
-        return
     Numere = [0 for _ in range(maxim+1)]
     for elem in nesortat:
         Numere[elem] += 1
@@ -147,17 +144,97 @@ def quick_sort(nesortat, st, dr):
         quick_sort(nesortat, i+2, dr)
 
 
-f = open("input.txt", "r")
-for _ in range(10):
-    L = [random.randint(0, 1500) for _ in range(1000000)]
-    #L = [2, 10, 34, 5, 16, 18, 20]
+with open("input.txt", "r") as f:
+    ins = [[int(x) for x in f.readline().split()] for _ in range(int(f.readline()))]
 
+for (lungime, maxim) in ins:
+    if maxim == -1:
+        print("Lungime: 100000 \t Sir constant.")
+        L = [1 for _ in range(100000)]
+        maxim = 1
+    elif maxim == -2:
+        print("Lungime: 100000 \t Sir sortat")
+        L = [x+1 for x in range(100000)]
+        maxim = 100000
+    elif maxim == -3:
+        print("Lungime: 100000 \t Sir descrescator")
+        L = [100000 - x for x in range(100000)]
+        maxim = 100000
+    else:
+        print(f"Lungime: {lungime} \t Maxim: {maxim}")
+        L = [random.randint(0, maxim) for _ in range(lungime)]
     L1 = L.copy()
+    L_init = L.copy()
+    L.sort()
     timp = float(time.time())
-    quick_sort(L, 0, len(L) - 1)
+    radix10(L1)
     timp = float(time.time()) - timp
-    if L == sorted(L1):
-        print(f"Sortat in {timp} secunde.")
+    if L == L1:
+        print(f"Sortat in {timp} secunde cu radix10.")
     else:
         print("SORTAT GRESIT")
-f.close()
+
+    L1 = L_init.copy()
+    timp = float(time.time())
+    radix10000(L1)
+    timp = float(time.time()) - timp
+    if L == L1:
+        print(f"Sortat in {timp} secunde cu radix10000.")
+    else:
+        print("SORTAT GRESIT")
+
+    L1 = L_init.copy()
+    timp = float(time.time())
+    radix2la16(L1)
+    timp = float(time.time()) - timp
+    if L == L1:
+        print(f"Sortat in {timp} secunde cu radix2la16.")
+    else:
+        print("SORTAT GRESIT")
+
+    L1 = L_init.copy()
+    timp = float(time.time())
+    merge_sort(L1)
+    timp = float(time.time()) - timp
+    if L == L1:
+        print(f"Sortat in {timp} secunde cu merge_sort.")
+    else:
+        print("SORTAT GRESIT")
+
+    L1 = L_init.copy()
+    if lungime < 100000000:
+        timp = float(time.time())
+        shell_sort(L1, lungime)
+        timp = float(time.time()) - timp
+        if L == L1:
+            print(f"Sortat in {timp} secunde cu shell_sort.")
+        else:
+            print("SORTAT GRESIT")
+    else:
+        print("Shell sort este prea lent")
+
+    L1 = L_init.copy()
+    if maxim > 100000000:
+        print("Maximul este prea mare pentru count sort.")
+    else:
+        timp = float(time.time())
+        count_sort(L1, maxim)
+        timp = float(time.time()) - timp
+        if L == L1:
+            print(f"Sortat in {timp} secunde cu count_sort.")
+        else:
+            print("SORTAT GRESIT")
+
+    L1 = L_init.copy()
+    timp = float(time.time())
+    if lungime < (maxim * 750):
+        timp = float(time.time())
+        quick_sort(L1, 0, lungime-1)
+        timp = float(time.time()) - timp
+        if L == L1:
+            print(f"Sortat in {timp} secunde cu quick_sort.")
+        else:
+            print("SORTAT GRESIT")
+    else:
+        print("Quick sort e posibil sa dea eroare de depasire a recursiilor posibile")
+    print("\n")

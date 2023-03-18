@@ -1,0 +1,118 @@
+Lungime: 1000 	 Maxim: 1000
+Sortat in 0.0 secunde cu radix10.
+Sortat in 0.0030007362365722656 secunde cu radix10000.
+Sortat in 0.013002872467041016 secunde cu radix2la16.
+Sortat in 0.002000570297241211 secunde cu merge_sort.
+Sortat in 0.0010001659393310547 secunde cu shell_sort.
+Sortat in 0.0010001659393310547 secunde cu count_sort.
+Sortat in 0.002000570297241211 secunde cu quick_sort.
+
+
+Lungime: 1000 	 Maxim: 1000000
+Sortat in 0.0010001659393310547 secunde cu radix10.
+Sortat in 0.006001472473144531 secunde cu radix10000.
+Sortat in 0.027005910873413086 secunde cu radix2la16.
+Sortat in 0.0010004043579101562 secunde cu merge_sort.
+Sortat in 0.002000570297241211 secunde cu shell_sort.
+Sortat in 0.12802910804748535 secunde cu count_sort.
+Sortat in 0.0019998550415039062 secunde cu quick_sort.
+
+
+Lungime: 1000 	 Maxim: 1000000000
+Sortat in 0.0010001659393310547 secunde cu radix10.
+Sortat in 0.007002115249633789 secunde cu radix10000.
+Sortat in 0.03100728988647461 secunde cu radix2la16.
+Sortat in 0.002000093460083008 secunde cu merge_sort.
+Sortat in 0.0010004043579101562 secunde cu shell_sort.
+Maximul este prea mare pentru count sort.
+Sortat in 0.0030007362365722656 secunde cu quick_sort.
+
+
+Lungime: 100000 	 Sir constant.
+Sortat in 0.015003204345703125 secunde cu radix10.
+Sortat in 0.01800370216369629 secunde cu radix10000.
+Sortat in 0.03500771522521973 secunde cu radix2la16.
+Sortat in 0.2360541820526123 secunde cu merge_sort.
+Sortat in 0.13503098487854004 secunde cu shell_sort.
+Sortat in 0.00800180435180664 secunde cu count_sort.
+Quick sort e posibil sa dea eroare de depasire a recursiilor posibile
+
+
+Lungime: 100000 	 Sir sortat
+Sortat in 0.0980224609375 secunde cu radix10.
+Sortat in 0.039008378982543945 secunde cu radix10000.
+Sortat in 0.0690164566040039 secunde cu radix2la16.
+Sortat in 0.24005389213562012 secunde cu merge_sort.
+Sortat in 0.14203214645385742 secunde cu shell_sort.
+Sortat in 0.022005081176757812 secunde cu count_sort.
+Sortat in 0.3010685443878174 secunde cu quick_sort.
+
+
+Lungime: 100000 	 Sir descrescator
+Sortat in 0.09602618217468262 secunde cu radix10.
+Sortat in 0.038008928298950195 secunde cu radix10000.
+Sortat in 0.07001519203186035 secunde cu radix2la16.
+Sortat in 0.24705719947814941 secunde cu merge_sort.
+Sortat in 0.23705387115478516 secunde cu shell_sort.
+Sortat in 0.023005247116088867 secunde cu count_sort.
+Sortat in 0.3030688762664795 secunde cu quick_sort.
+
+
+Lungime: 1000000 	 Maxim: 1000
+Sortat in 1.018237590789795 secunde cu radix10.
+Sortat in 0.26906681060791016 secunde cu radix10000.
+Sortat in 0.29106616973876953 secunde cu radix2la16.
+Sortat in 3.5261900424957275 secunde cu merge_sort.
+Sortat in 6.048346281051636 secunde cu shell_sort.
+Sortat in 0.09202098846435547 secunde cu count_sort.
+Quick sort e posibil sa dea eroare de depasire a recursiilor posibile
+
+
+Lungime: 1000000 	 Maxim: 1000000
+Sortat in 2.177494764328003 secunde cu radix10.
+Sortat in 0.6901569366455078 secunde cu radix10000.
+Sortat in 0.9412205219268799 secunde cu radix2la16.
+Sortat in 3.5107979774475098 secunde cu merge_sort.
+Sortat in 8.470376014709473 secunde cu shell_sort.
+Sortat in 0.2380533218383789 secunde cu count_sort.
+Sortat in 3.5713346004486084 secunde cu quick_sort.
+
+
+Lungime: 1000000 	 Maxim: 1000000000
+Sortat in 2.9146687984466553 secunde cu radix10.
+Sortat in 1.0662422180175781 secunde cu radix10000.
+Sortat in 0.8001816272735596 secunde cu radix2la16.
+Sortat in 3.725865125656128 secunde cu merge_sort.
+Sortat in 8.577990531921387 secunde cu shell_sort.
+Maximul este prea mare pentru count sort.
+Sortat in 3.5518064498901367 secunde cu quick_sort.
+
+
+Lungime: 100000000 	 Maxim: 1000
+Sortat in 116.88188219070435 secunde cu radix10.
+Sortat in 28.587069988250732 secunde cu radix10000.
+Sortat in 29.737858057022095 secunde cu radix2la16.
+Sortat in 503.14280104637146 secunde cu merge_sort.
+Shell sort este prea lent
+Sortat in 9.915538549423218 secunde cu count_sort.
+Quick sort e posibil sa dea eroare de depasire a recursiilor posibile
+
+
+Lungime: 100000000 	 Maxim: 1000000
+Sortat in 261.02666902542114 secunde cu radix10.
+Sortat in 94.44916129112244 secunde cu radix10000.
+Sortat in 91.6286883354187 secunde cu radix2la16.
+Sortat in 556.0223336219788 secunde cu merge_sort.
+Shell sort este prea lent
+Sortat in 9.100095987319946 secunde cu count_sort.
+Sortat in 795.1404185295105 secunde cu quick_sort.
+
+
+Lungime: 100000000 	 Maxim: 1000000000
+Sortat in 352.00413727760315 secunde cu radix10.
+Sortat in 152.40815329551697 secunde cu radix10000.
+Sortat in 110.84235882759094 secunde cu radix2la16.
+Sortat in 557.5956223011017 secunde cu merge_sort.
+Shell sort este prea lent
+Maximul este prea mare pentru count sort.
+Sortat in 559.5136206150055 secunde cu quick_sort.
